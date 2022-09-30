@@ -101,7 +101,7 @@
     <script>
         const checkNum=(num)=>{
             console.log(num);
-            if(isNaN(number(num))){
+            if(isNaN(num)){
                 return false;
                 console.log("funtion false");
 
@@ -110,6 +110,7 @@
                 return true;
             } 
         }
+        // console.log(checkNum("1s"));
         const checkValidate=()=>{
             check = false;
             // var ten = document.getElementById("ten");
@@ -145,15 +146,15 @@
                 document.getElementById("chiso").innerText = ""
                 check = true;
             }
-            // if(!checkNum(document.getElementById("inputsotrang").value)){
-            //     document.getElementById("sotrang").innerText = "So trang khong duoc rong va la so nguyen duong"
-            //     console.log("false");
-            //     return false;
-            // } else{
-            //     document.getElementById("sotrang").innerText = ""
-            //     check = true;
-            //     console.log("true");
-            // }
+            if(!(checkNum(document.getElementById("inputsotrang").value) && document.getElementById("inputsotrang").value != "")){
+                document.getElementById("sotrang").innerText = "So trang khong duoc rong va la so nguyen duong"
+                console.log("false");
+                return false;
+            } else{
+                document.getElementById("sotrang").innerText = ""
+                check = true;
+                console.log("true");
+            }
             
             if(document.getElementById("inputnam").value ==""){
                 document.getElementById("nam").innerText = "Nam xuat ban khong duoc rong"
