@@ -56,7 +56,7 @@
         </form>
         <h2>Table Head Colors</h2>
         <form id="delete" method="POST" action="/delete" enctype="multipart/form-data">
-            <button type="submit" class="btn btn-primary">DELETE</button>
+            <button type="submit" onclick="return confirmAction()" class="btn btn-primary">DELETE</button>
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
@@ -164,6 +164,9 @@
             }
            
             return check;
+        }
+        function confirmAction() {
+            return confirm("Xin chào bạn ! Bạn có muốn xóa không?")
         }
     </script>
 </body>
